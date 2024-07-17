@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
@@ -9,6 +8,7 @@
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <PublishTrimmed>false</PublishTrimmed>
+    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
@@ -82,7 +82,7 @@
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)'=='net6.0'">
+  <ItemGroup Condition="'$(TargetFramework)'=='net8.0'">
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
